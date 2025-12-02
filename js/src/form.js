@@ -1,9 +1,9 @@
-import { slideUp, slideDown, slideToggle } from './animations.js';
+import animation from './animations.js';
 
 function formSubmitListener(e) {
     e.preventDefault();
     const form = e.target;
-    slideUp(form);
+    animation.slideUp(form);
     const modal = form.closest('.modal');
     if(modal) {
         event.preventDefault();
@@ -12,10 +12,10 @@ function formSubmitListener(e) {
             .then(() => {
                 console.log('SUCCESS!');
                 const closeButton = modal.querySelector('.modal-close');
-                slideDown(closeButton);
+                animation.slideDown(closeButton);
                 const formResult = modal.querySelector('.form-result');
                 formResult.innerHTML = formResult.dataset.defaultText;
-                slideDown(formResult);
+                animation.slideDown(formResult);
             }, (error) => {
                 console.log('FAILED...', error);
                 formResult.innerHTML = "Произошла ошибка при отправке. Пожалуйста, попробуйте позже.";
