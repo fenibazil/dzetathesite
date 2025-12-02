@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="./styles/stylebootstrap.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/cart.css">
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
@@ -53,10 +54,10 @@
         <section class="container product-main">
             <div class="row">
                 <div class="col-12 col-md-4">
-                    <img class="product-image" alt="Флюс ПВ209Х" title="Флюс ПВ209Х" src="./images/pv209x.jpg">
+                    <img class="product-image js_product-image" alt="Флюс ПВ209Х" title="Флюс ПВ209Х" src="./images/pv209x.jpg">
                 </div>
                 <div class="col-12 col-md-8">
-                    <h1>Флюс ПВ209Х</h1>
+                    <h1 class="js_product-name">Флюс ПВ209Х</h1>
                     <ul class="product-characteristic">
                         <li>
                             <div class="label">Температурный интервал активности:</div>
@@ -83,10 +84,11 @@
                             <div class="value">вода</div>
                         </li>
                     </ul>
-                    <div class="col-12 col-md-12 add-to-cart js_add-to-cart">
-                        <input type="number" placeholder="Введите количество" value="1" step="1">
-                        <button class="js_order-button align-self-end" data-modal="order-modal" data-modal-title="Флюс ПВ209Х">
-                            Заказать
+                    <div class="col-12 col-md-12 add-to-cart js_add-to-cart-block">
+                        <input type="number" class="js_add-to-cart-quantity" placeholder="Введите количество" value="1" step="1">
+                        <input type="hidden" class="js_add-to-cart-id" value="1">
+                        <button class="js_add-to-cart align-self-end">
+                            Добавить в карзину
                         </button>
                     </div>
                 </div>
@@ -153,6 +155,7 @@
         </div>
       </div>
 
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
       <script src="./js/scripts.js"></script>
 </body>
 </html>

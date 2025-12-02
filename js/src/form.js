@@ -3,10 +3,10 @@ import animation from './animations.js';
 function formSubmitListener(e) {
     e.preventDefault();
     const form = e.target;
-    animation.slideUp(form);
     const modal = form.closest('.modal');
-    if(modal) {
+    if(modal && modal.classList.contains('')) {
         event.preventDefault();
+        animation.slideUp(form);
         // these IDs from the previous steps
         emailjs.sendForm('service_tc0fgps', 'template_x64v6v1', this)
             .then(() => {
